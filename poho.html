@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+
+    <script type="text/javascript" src="js/jquery.js "></script>
+    <script type="text/javascript" src="js/hackplanet.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+
+
+
+    <title>CSULB STUDENT DEGREE PLANNER</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+
+    .badge {
+      font-size: 1em;
+      margin: 0px 0;
+  
+      min-width: 30px;
+      text-align: center;
+      padding:10px;
+    }
+     #draggable {}
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">DEGREE PLANNER</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">HOME</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">MAJORS <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="./coe">College of Engineering</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">OTHER COLLEGES</li>
+                <li><a href="#">College of Arts</a></li>
+                <li><a href="#">College of Business Admin</a></li>
+                <li><a href="#">College of Education</a></li>
+                <li><a href="#">College of Health & Human Sciences</a></li>
+                <li><a href="#">College of Liberal Arts</a></li>
+                <li><a href="#">College of Continuing..</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">CATALOG <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">2013-2014</a></li>
+                <li><a href="#">2012-2013</a></li>
+
+              
+
+                <li class="divider"></li>
+                <li class="dropdown-header">OTHER CATALOGS</li>
+                <li><a href="#">2011-2012</a></li>
+                <li><a href="#">2010-2011</a></li>
+                <li><a href="http://www.csulb.edu">CSULB</a></li>
+              </ul>
+            </li>
+            <li><a href="http://www.csulb.edu">CSULB</a></li>
+            <li><a href="http://www.csulb.edu/divisions/aa/catalog/current/roadmaps/">ROADMAP</a></li>
+
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron dragTo">
+      <div class="container">
+      
+      
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-12">
+          <center><h2>COMPUTER SCIENCE 2013 - 2014 COURSES</h2><center>
+          <center><h4>Total Units Left to Graduate: </h4><span class="badge" id="total" >0.0</span></center>
+          </br>
+        </div>
+      </div>
+
+<div class="row">
+       <div class="col-lg-12">
+          <center><h4>Please select a degree plan</h4><center>
+          <!-- Single button -->
+        </br>
+      </div>
+
+      <div class="row">
+<!-- Indicates a successful or positive action -->
+<center>
+  <button type="button" class="btn btn-warning" id="4plan" >4-Year</button>
+  <button type="button" class="btn btn-success" id="" >5-Year</button>
+  <button type="button" class="btn btn-danger" id="" >6-Year</button>
+</center>
+
+
+
+</div>
+ </br>
+ <hr>
+
+
+      <div class="row">
+        <div class="col-lg-2">
+          <h7>MATH: </h7><span class="badge" id="mathTot" >0.0</span>
+        </div>
+
+        <div class="col-lg-2">
+          <h7>SCI: </h7><span class="badge" id="sciTot" >0.0</span>
+        </div>
+
+        <div class="col-lg-2">
+          <h7>CS: </h7><span class="badge" id="csTot" >0.0</span>
+        </div>
+
+        <div class="col-lg-2">
+          <h7>GE: </h7><span class="badge" id="geTot" >0.0</span>
+        </div>
+
+        <div class="col-lg-2">
+          <h7>CAPSTONE: </h7><span class="badge" id="capTot" >0.0</span>
+        </div>
+
+        <div class="col-lg-2">
+          <h7>ELECTIVES: </h7><span class="badge" id="elecTot" >0.0</span>
+        </div>
+      </div>
+  <hr>
+      <div class="row">
+        <center><h2>Classes Taken</h2><center>
+        <div class="jumbotron dragTo">
+          
+          
+        </div>
+      </div>
+      <hr>
+
+      <hr>
+      <div class="row">
+        <div class="col-lg-6">
+          <center><h2>Semester 1</h2><center>
+          <div class="jumbotron">
+          </div>
+        </div>
+         <div class="col-lg-6">
+          <center><h2>Semester 2</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <center><h2>Semester 3</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+         <div class="col-lg-6">
+          <center><h2>Semester 4</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <center><h2>Semester 5</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+         <div class="col-lg-6">
+          <center><h2>Semester 6</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <center><h2>Semester 7</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+         <div class="col-lg-6">
+          <center><h2>Semester 8</h2><center>
+          <div class="jumbotron dragTo">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <hr>
+      <div class="row">
+        <center><h2>Classes to be taken</h2><center>
+
+          <span class="btn btn-success dragabble">CECS 100</span>
+          <span class="btn btn-success dragabble">CECS 200</span>
+          <span class="btn btn-success dragabble">CECS 300</span>
+          <span class="btn btn-success dragabble">CECS 400</span>
+          
+            
+        
+
+          
+
+      </div>
+      <hr>
+
+      <footer>
+        <p>&copy; CSULB 2013</p>
+      </footer>
+</div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./dist/js/bootstrap.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+
+        var tot = 122;
+        var math  = 12;
+        var sci  = 12;
+        var cs  = 12;
+        var ge  = 12;
+        var cap  = 12;
+        var elec  = 12;
+
+        $('#4plan').click(function(){
+          $windows = $('<div class ="highlight"><pre>Hello</pre></div>');
+
+
+        });
+        $('#5plan').click(function(){
+          
+
+        });
+        $('#6plan').click(function(){
+          
+
+        });
+
+        $('#total').html(tot)
+        $('#mathTot').html(math)
+        $('#sciTot').html(sci)
+        $('#csTot').html(cs)
+        $('#geTot').html(ge)
+        $('#capTot').html(cap)
+        $('#elecTot').html(elec)
+
+        $(".dragabble").draggable( {
+          snap: '.dragTo',
+
+   stop: function(event, ui) {
+      console.log(event);
+    }
+
+
+        });
+
+      });
+
+    </script>
+  
+  </body>
+</html>
